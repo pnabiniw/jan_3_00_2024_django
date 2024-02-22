@@ -1,0 +1,55 @@
+# Feb 22 2024
+
+1. What is Django?
+=> Django is a python web-framework
+
+2. Why framework?
+=> For every web applications the basic configutrations are always same.
+For example: request-response (http)
+	     Middleware
+	     Authentication
+These common aspects of any web application should not be rebuilt
+
+"Re-enventing the wheel"
+
+3. What architecture does Django work on?
+	=> MVT (Model View Template)
+	= MVC (Model View Controller)
+	
+	In MVC
+	Model => Design of our db/tables in a db
+	View => It is the FE or the user facing side (HTML/CSS/JS)
+	Controller => It is the logical part of the web application
+
+	In MVT
+	View => Logical or the functional part of the application
+	Template => It is the FE or the user facing side (HTML/CSS/JS)
+
+4. What are the type of web applications?
+	=> SPA (Single Page Application)
+	=> SSR (Server Side Rendering)
+
+
+
+5. In which type of application this session goes?
+	=> Most of the time we work with SSR architecture. But we will also learn to create APIs using Django
+	=> Using Django Rest Framework
+
+
+
+6. Let's get started with Django
+	1. Create a project folder
+	2. Create a virtual environment
+	3. Activate the environment
+	4. pip install django
+	
+	5. django-admin startproject myproject
+	
+
+
+
+
+
+
+
+	
