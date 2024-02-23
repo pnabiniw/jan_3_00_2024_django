@@ -1,2 +1,2 @@
 1. Project Setup and Push to github (Feb 22)
-
+2. Project Structure and MVT (Feb 23)
