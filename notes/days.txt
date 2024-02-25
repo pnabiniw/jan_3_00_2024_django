@@ -1,3 +1,3 @@
 1. Project Setup and Push to github (Feb 22)
 2. Project Structure and URLs (Feb 23)
-3. (Feb 25)
+3. NavBar, Navigation and Portfolio Page (Feb 25)
