@@ -4,13 +4,13 @@
 => Django is a python web-framework
 
 2. Why framework?
-=> For every web applications the basic configutrations are always same.
+=> For every web applications the basic configurations are always same.
 For example: request-response (http)
 	     Middleware
 	     Authentication
 These common aspects of any web application should not be rebuilt
 
-"Re-enventing the wheel"
+"Re-inventing the wheel"
 
 3. What architecture does Django work on?
 	=> MVT (Model View Template)

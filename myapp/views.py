@@ -20,3 +20,6 @@ def home(request):
     """)
 
 
+def root_page(request):
+    return render(request, template_name="myapp/root_page.html")
+
