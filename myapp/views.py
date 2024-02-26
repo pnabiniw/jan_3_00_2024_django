@@ -38,6 +38,7 @@ def classroom(request):
         {"name": "Two", "address": "PKR"},
         {"name": "Three", "address": "BKT"},
         {"name": "Four", "address": "LTP"},
+        {"name": "Four", "address": "LTP"},
     ]
     return render(request, template_name="myapp/classroom.html",
                   context={"classroom_name": "One", "location": "KTM", "classrooms": classrooms})
