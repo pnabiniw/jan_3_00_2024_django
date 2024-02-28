@@ -44,12 +44,4 @@ These common aspects of any web application should not be rebuilt
 	4. pip install django
 	
 	5. django-admin startproject myproject
-	
-
-
-
-
-
-
-
-	
+	6. Move venv inside the project folder
