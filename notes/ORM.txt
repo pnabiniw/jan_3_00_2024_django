@@ -27,6 +27,7 @@ Read
     # get
     classroom = ClassRoom.objects.get(name="One")
 
+    => get() method returns single object (single row of a table)
     => get() method should always be used with unique attributes like username, email, id, phone etc.
     => There are two types of errors associated with get() method
         => MultipleObjectsReturned: It is raised when get() is used with data occurring multiple times in a table
@@ -44,3 +45,23 @@ Read
    # Second Method
    c = ClassRoom(name="Two", address="PKR")
    c.save()
+
+
+
+# Feb 29
+
+# Update
+We use update() method in ORM to update table rows
+1. ClassRoom.objects.all().update(address="NPL")
+    => update() method is used with queryset
+
+2. ClassRoom.objects.filter(name="One").update(address="NPL")
+3. ClassRoom.objects.get(id=1).update(address="NPL")  => This is not a valid ORM. It raises AttributeError
+
+
+# Delete
+We use delete() method to delete table rows
+delete() method can be used with both queryset and an object
+
+ClassRoom.objects.filter(name="One").delete()
+ClassRoom.objects.get(id=2).delete() => Unlike update() method, this is a valid ORM

@@ -1,0 +1,4 @@
+# There are three types of table relations
+1. OneToOne
+2. OneToMany
+3. ManyToMany
