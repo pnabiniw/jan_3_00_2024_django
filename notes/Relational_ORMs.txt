@@ -1,4 +1,6 @@
-Take "ClassRoom" and "Student" as two models where Student table has a F.K classroom
+# Feb 29
+
+Take "ClassRoom" and "Student" as two models where Student table has an F.K classroom
 
 class ClassRoom:
     - name

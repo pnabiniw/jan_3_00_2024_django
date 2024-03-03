@@ -5,3 +5,4 @@
 5. Project Setup Recap and Migration Introduction (Feb 27)
 6. Django Models, Create, Get, Filter ORM (Feb 28)
 7. Django ORM (Feb 29)
+8. Django ORM and Model Relations (March 3)
