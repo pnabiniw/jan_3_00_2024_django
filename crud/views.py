@@ -1,6 +1,11 @@
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
+
+from .models import ClassRoom
+
 
 def signup(request):
     print(request.method)
@@ -26,8 +31,50 @@ def signup(request):
 
 
 def user_login(request):
+    if request.method == "POST":
+        un = request.POST.get("username")
+        pw = request.POST.get("password")
+        user = authenticate(username=un, password=pw)
+        if not user:
+            messages.error(request, "Couldn't login with provided credentials !!")
+            return redirect("user_login")
+        login(request, user)
+        messages.success(request, "User logged in successfully !!")
+        return redirect('crud_classroom')
     return render(request, template_name="crud/login.html")
 
 
+@login_required
 def classroom(request):
-    return render(request, template_name="crud/classroom.html")
+    classrooms = ClassRoom.objects.all()
+    return render(request, template_name="crud/classroom.html", context={"classrooms": classrooms})
+
+
+def user_logout(request):
+    logout(request)
+    return redirect('root_page')
+
+
+def add_classroom(request):
+    if request.method == "POST":
+        classname = request.POST.get("name")
+        ClassRoom.objects.create(name=classname)
+        return redirect('crud_classroom')
+    return render(request, template_name='crud/add_classroom.html')
+
+
+def update_classroom(request, id):
+    c = ClassRoom.objects.get(id=id)
+    if request.method == "POST":
+        c.name = request.POST.get("name")
+        c.save()
+        return redirect('crud_classroom')
+    return render(request, template_name="crud/update_classroom.html", context={"classroom": c})
+
+
+def delete_classroom(request, id):
+    c = ClassRoom.objects.get(id=id)
+    if request.method == "POST":
+        c.delete()
+        return redirect("crud_classroom")
+    return render(request, template_name="crud/delete_classroom.html", context={"classroom": c})

@@ -7,3 +7,5 @@
 7. Django ORM (Feb 29)
 8. Django ORM and Model Relations (March 3)
 9. Handling HTML form and HTTP methods (March 5)
+10. ClassRoom CRUD (March 6)
+11. ClassRoom CRUD complete and Student CRUD start (March 7)
