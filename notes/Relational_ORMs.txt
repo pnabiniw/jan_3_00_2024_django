@@ -33,5 +33,6 @@ class Student:
     => returns classroom queryset
 
 9. if "c" is the classroom object then:
+    => Student.objects.filter(classroom=c)
     => c.classroom_students.all() => It gives Student queryset
     => c.classroom_students.filter(name="Jon")  => It gives student queryset

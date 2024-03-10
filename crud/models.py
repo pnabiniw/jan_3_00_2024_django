@@ -11,6 +11,10 @@ class UserProfile(models.Model):
     def __str__(self):
         return f'profile of {self.user.username}'
 
+    @property
+    def get_full_name(self):
+        return self.user.get_full_name() if self.user.get_full_name() else self.user.username
+
 
 class ClassRoom(models.Model):
     name = models.CharField(max_length=10)
