@@ -25,4 +25,4 @@ class Student(models.Model):
     classroom = models.ForeignKey(ClassRoom, on_delete=models.CASCADE, related_name="classroom_students")
 
 
-# Name, email, address, phone_number, classroom
+# First Name, Last Name, address, phone_number, profile_picture
