@@ -1,6 +1,6 @@
 {% extends 'crud/base.html' %}
 {% block content %}
-    {% include 'crud/nav.html' %}
+    {% include 'classbased/nav.html' %}
     <br>
     <h2>ClassRoom</h2>
     <a href="{% url 'classbased_add_classroom' %}" class="btn btn-success" style="float: right">Add ClassRoom</a>
@@ -19,8 +19,8 @@
             <th scope="row">{{ forloop.counter }}</th>
             <td>{{ classroom.name }}</td>
             <td>
-                <a href="#">Update</a>
-                <a href="#">Delete</a>
+                <a href="{% url 'cb_update_classroom' classroom.id %}">Update</a>
+                <a href="{% url 'cb_delete_classroom' classroom.id %}">Delete</a>
             </td>
         </tr>
         {% endfor %}

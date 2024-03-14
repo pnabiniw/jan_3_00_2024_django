@@ -12,3 +12,4 @@
 12. Student CRUD (March 10)
 13. Media Upload (March 11)
 14. M2M relation and ORMs (March 12)
+15. ClassBased CRUD (March 13)
