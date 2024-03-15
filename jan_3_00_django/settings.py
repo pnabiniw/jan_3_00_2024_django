@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'myapp',
     'crud',
     'classbased',
-    "api"
+    "api",
+    "rest_framework"
 ]
 
 MIDDLEWARE = [
