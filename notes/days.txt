@@ -16,3 +16,4 @@
 16. Profile CRUD (March 14)
 17. API Introduction (March 15)
 18. ClassRoom CRUD using APIs (March 17)
+19. Generic Views (March 18)
