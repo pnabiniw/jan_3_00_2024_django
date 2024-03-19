@@ -4,13 +4,14 @@ from .views import home, HomeView, StudentAPIView, StudentListAPIView, SimpleCla
 
 
 from .generic_views import ClassRoomGenericView, ClassRoomGenericCreateView, ClassRoomListCreateView, \
-    ClassRoomUpdateView, ClassRoomRUDView, ClassRoomViewSet, UserProfileViewSet
+    ClassRoomUpdateView, ClassRoomRUDView, ClassRoomViewSet, UserProfileViewSet, UserViewSet
 
 from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 
 router.register('classroom-viewset', ClassRoomViewSet)
 router.register('profile-viewset', UserProfileViewSet)
+router.register('user-viewset', UserViewSet)
 
 urlpatterns = [
     path("home/", home),
@@ -32,6 +33,7 @@ generic_urlpatterns = [
     path("generic-classroom-list-create/", ClassRoomListCreateView.as_view()),
     path("generic-classroom-update/<int:pk>/", ClassRoomUpdateView.as_view()),
     path("generic-classroom-rud/<int:pk>/", ClassRoomRUDView.as_view()),   # rud => Retrieve Update Delete
+
 ]
 
 urlpatterns += generic_urlpatterns + router.urls
