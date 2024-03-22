@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'crud',
     'classbased',
     "api",
-    "rest_framework"
+    "rest_framework",
+    "rest_framework.authtoken",
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,10 @@ MESSAGE_TAGS = {
 }
 
 LOGIN_URL = 'user_login'
+
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication"
+    ]
+}

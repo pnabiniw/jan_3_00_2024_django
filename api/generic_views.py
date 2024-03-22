@@ -4,6 +4,7 @@ from rest_framework.generics import ListAPIView, CreateAPIView, ListCreateAPIVie
     UpdateAPIView, RetrieveUpdateDestroyAPIView
 
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.permissions import IsAuthenticated
 from crud.models import ClassRoom, UserProfile
 
 from .serializers import ClassRoomModelSerializer, UserProfileModelSerializer, UserSerializer
@@ -60,5 +61,6 @@ class UserProfileViewSet(ModelViewSet):
 
 
 class UserViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated, ]
     serializer_class = UserSerializer
     queryset = User.objects.all()

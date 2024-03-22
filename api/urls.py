@@ -7,6 +7,8 @@ from .generic_views import ClassRoomGenericView, ClassRoomGenericCreateView, Cla
     ClassRoomUpdateView, ClassRoomRUDView, ClassRoomViewSet, UserProfileViewSet, UserViewSet
 
 from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken.views import obtain_auth_token
+
 router = DefaultRouter()
 
 router.register('classroom-viewset', ClassRoomViewSet)
@@ -24,6 +26,9 @@ urlpatterns = [
     path("classroom/<int:id>/", ClassRoomRetrieveView.as_view()),
     path("classroom-update-delete/<int:id>/", ClassRoomUpdateDeleteView.as_view()),
     path("classroom/", ClassRoomView.as_view()),
+
+    # Login URL
+    path('login/', obtain_auth_token)
 ]
 
 

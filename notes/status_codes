@@ -1,0 +1,21 @@
+20X => Success Line
+30X => Redirection
+40X => Bad Request (Frontend Issue)
+50X => Server Issue (BE issue)
+
+200 => Success
+201 => Successfully Created
+204 => Successfully Deleted
+
+
+301 => Permanent Redirection
+302 => Temporary Redirection
+
+400 => Bad Request
+401 => Unauthenticated
+403 => Permission Denied
+405 => Method not allowed
+
+
+500 => Server Error
+502 => Bad Gateway
