@@ -11,9 +11,9 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 router = DefaultRouter()
 
-router.register('classroom-viewset', ClassRoomViewSet)
-router.register('profile-viewset', UserProfileViewSet)
-router.register('user-viewset', UserViewSet)
+router.register('classroom-viewset', ClassRoomViewSet, basename="classroom")
+router.register('profile-viewset', UserProfileViewSet, basename="userprofile")
+router.register('user-viewset', UserViewSet, basename="user")
 
 urlpatterns = [
     path("home/", home),

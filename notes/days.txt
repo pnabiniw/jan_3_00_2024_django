@@ -19,3 +19,4 @@
 19. Generic Views and ViewSets (March 18)
 20. APIs for Model Relations (March 19)
 21. Login/ Authentication and Permission (March 22)
+22. Pagination, Search and Filter (March 26)
